@@ -1,6 +1,6 @@
 ﻿using AppComprasNetCore.Domain.Validations;
 
-namespace AppComprasNetCore.Domain.Entities.Person;
+namespace AppComprasNetCore.Domain.Entities;
 
 public sealed class Person
 {
@@ -8,6 +8,7 @@ public sealed class Person
     public string Name { get; private set; }
     public string Document { get; private set; }
     public string Phone { get; private set; }
+    public ICollection<Purchase> purchases { get; private set; }
 
     public Person(string name, string document, string phone)
     {
