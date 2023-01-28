@@ -8,8 +8,12 @@ public sealed class Product
     public string Name { get; private set; }
     public string CodeErp { get; private set; }
     public decimal Price { get; private set; }
+<<<<<<< HEAD
     public ICollection<Purchase> purchases { get; private set; }
 
+=======
+    public ICollection<Purchase> Purchases { get; set; }
+>>>>>>> a7056d0922da22df2e19f9f1c03d0f03e13eaf1d
 
     public Product(string name, string codErp, decimal price)
     {
