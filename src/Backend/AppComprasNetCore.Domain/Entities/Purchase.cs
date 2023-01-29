@@ -15,7 +15,6 @@ public sealed class Purchase
         Validation(productId, personId, date);
     }
 
-
     public Purchase(int id, int productId, int personId, DateTime date, Person person, Product product)
     {
         DomaniValidationException.When(id < 0, "Id da compra deve ser informado");
