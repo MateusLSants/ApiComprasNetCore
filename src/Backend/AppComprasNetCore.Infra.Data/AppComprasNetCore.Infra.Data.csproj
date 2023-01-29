@@ -23,8 +23,4 @@
     <ProjectReference Include="..\AppComprasNetCore.Domain\AppComprasNetCore.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Map\" />
-  </ItemGroup>
-
 </Project>
