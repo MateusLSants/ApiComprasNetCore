@@ -32,7 +32,7 @@ public class ResultService
             {
                 Field = x.PropertyName,
                 Message = x.ErrorMessage
-            }).ToList(),
+            }).ToList()
         };
     }
 
