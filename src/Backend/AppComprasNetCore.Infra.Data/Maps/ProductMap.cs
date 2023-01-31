@@ -12,14 +12,14 @@ public class ProductMap : IEntityTypeConfiguration<Product>
         builder.HasKey(c => c.Id);
 
         builder.Property(c => c.Id)
-            .HasColumnName("IdProduto")
+            .HasColumnName("Idproduto")
             .UseMySqlIdentityColumn();
 
         builder.Property(c => c.Name)
             .HasColumnName("Nome");
 
         builder.Property(c => c.CodeErp)
-            .HasColumnName("CodErp");
+            .HasColumnName("Coderp");
 
         builder.Property(c => c.Price)
             .HasColumnName("Preco");

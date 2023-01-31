@@ -12,20 +12,20 @@ public class PurchaseMap : IEntityTypeConfiguration<Purchase>
         builder.HasKey(c => c.Id);
 
         builder.Property(c => c.Id)
-            .HasColumnName("idCompra")
+            .HasColumnName("Idcompra")
             .UseMySqlIdentityColumn();
 
         builder.Property(c => c.PersonId)
-            .HasColumnName("IdPessoa");
+            .HasColumnName("Idpessoa");
 
         builder.Property(c => c.ProductId)
-            .HasColumnName("IdProduto");
+            .HasColumnName("Idproduto");
 
         builder.Property(c => c.Date)
-            .HasColumnName("DataCompra");
+            .HasColumnName("Datacompra");
 
         builder.HasOne(c => c.Person)
-            .WithMany(x => x.purchases);
+            .WithMany(x => x.Purchases);
 
         builder.HasOne(c => c.Product)
             .WithMany(x => x.Purchases);

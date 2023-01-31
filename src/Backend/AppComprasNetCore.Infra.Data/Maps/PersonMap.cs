@@ -13,7 +13,7 @@ public class PersonMap : IEntityTypeConfiguration<Person>
         builder.HasKey(c => c.Id);
 
         builder.Property(c => c.Id)
-            .HasColumnName("idPessoa")
+            .HasColumnName("Idpessoa")
             .UseMySqlIdentityColumn();
 
         builder.Property(c => c.Name)
@@ -26,7 +26,7 @@ public class PersonMap : IEntityTypeConfiguration<Person>
             .HasColumnName("Documento")
             .UseMySqlIdentityColumn();
 
-        builder.HasMany(c => c.purchases)
+        builder.HasMany(c => c.Purchases)
             .WithOne(p => p.Person)
             .HasForeignKey(c => c.PersonId);
     }
