@@ -28,6 +28,6 @@ public class PersonService : IPersonService
 
         var person = _mapper.Map<Person>(personDTO);
         var data = await _personRepository.CreateAsync(person);
-        return ResultService.Ok<PersonDTO>(_mapper.Map<PersonDTO>(data));
+        return ResultService.Ok(_mapper.Map<PersonDTO>(data));
     }
 }
