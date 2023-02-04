@@ -1,5 +1,4 @@
-﻿using AppComprasNetCore.Application.DTOs;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace AppComprasNetCore.Application.DTOs.Validations;
 

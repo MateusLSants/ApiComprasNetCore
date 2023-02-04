@@ -10,17 +10,17 @@ public sealed class Product
     public decimal Price { get; private set; }
     public ICollection<Purchase> Purchases { get; private set; }
 
-    public Product(string name, string codErp, decimal price)
+    public Product(string name, string codeErp, decimal price)
     {
-        Validation(name, CodeErp, Price);
+        Validation(name, codeErp, price);
         Purchases = new List<Purchase>();
     }
 
-    public Product(int id, string name, string codErp, decimal price)
+    public Product(int id, string name, string codeErp, decimal price)
     {
         DomaniValidationException.When(id < 0, "Id do produto deve ser informado");
         Id = id;
-        Validation(name, CodeErp, Price);
+        Validation(name, codeErp, price);
         Purchases = new List<Purchase>();
     }
 

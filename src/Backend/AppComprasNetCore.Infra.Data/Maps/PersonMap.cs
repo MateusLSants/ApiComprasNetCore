@@ -8,23 +8,22 @@ public class PersonMap : IEntityTypeConfiguration<Person>
 {
     public void Configure(EntityTypeBuilder<Person> builder)
     {
-        builder.ToTable("Pessoa");
+        builder.ToTable("pessoa");
 
         builder.HasKey(c => c.Id);
 
         builder.Property(c => c.Id)
-            .HasColumnName("Idpessoa")
+            .HasColumnName("idpessoa")
             .UseMySqlIdentityColumn();
 
         builder.Property(c => c.Name)
-            .HasColumnName("Nome");
+            .HasColumnName("nome");
 
         builder.Property(c => c.Phone)
-            .HasColumnName("Telefone");
+            .HasColumnName("telefone");
 
         builder.Property(c => c.Document)
-            .HasColumnName("Documento")
-            .UseMySqlIdentityColumn();
+            .HasColumnName("documento");
 
         builder.HasMany(c => c.Purchases)
             .WithOne(p => p.Person)
